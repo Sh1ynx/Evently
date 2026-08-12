@@ -6,6 +6,12 @@
   "main": "src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./src/index.ts"
+    "start": "node ./src/index.ts --watch"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0"
+  },
+  "dependencies": {
+    "typecheck": "^0.1.2"
   }
 }

@@ -1,7 +1,7 @@
-import { createServer } from 'http';
+import { createServer, IncomingMessage, ServerResponse } from 'http';
 
 
-const server = createServer((req: any, res: any) => {
+const server = createServer((req: IncomingMessage, res: ServerResponse) => {
     if (req.url == "/health" && req.method == "GET"){
         res.writeHead(200, {"Content-Type": "application/json"})
         res.write(JSON.stringify({"message":"I am alive"}))
